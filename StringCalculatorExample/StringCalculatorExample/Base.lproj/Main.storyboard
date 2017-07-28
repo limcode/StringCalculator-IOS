@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input: 1*2+3/(4-5)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRJ-NL-OFL">
+                                <rect key="frame" x="33" y="157" width="309" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bud-nU-yJB"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lj-ig-mAt">
+                                <rect key="frame" x="33" y="149" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7c4-it-hoX">
+                                <rect key="frame" x="187" y="333.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVJ-no-bg3">
+                                <rect key="frame" x="162" y="514" width="46" height="30"/>
+                                <state key="normal" title="Calculat"/>
+                                <connections>
+                                    <action selector="startCal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpm-ek-Lge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xRJ-NL-OFL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="9FM-Vk-6xu"/>
+                            <constraint firstItem="7c4-it-hoX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LcM-BC-fbl"/>
+                            <constraint firstItem="xRJ-NL-OFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NbT-xm-3km"/>
+                            <constraint firstItem="xRJ-NL-OFL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="137" id="Tto-Bg-mTC"/>
+                            <constraint firstItem="7c4-it-hoX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dDx-dL-srS"/>
+                            <constraint firstItem="xRJ-NL-OFL" firstAttribute="top" secondItem="4Lj-ig-mAt" secondAttribute="bottom" constant="8" id="dS9-xA-hUC"/>
+                            <constraint firstItem="4Lj-ig-mAt" firstAttribute="leading" secondItem="xRJ-NL-OFL" secondAttribute="leading" id="eaf-oO-FXR"/>
+                            <constraint firstItem="ZVJ-no-bg3" firstAttribute="top" secondItem="7c4-it-hoX" secondAttribute="bottom" constant="170" id="qpD-KR-MYp"/>
+                            <constraint firstItem="ZVJ-no-bg3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s8S-4E-Sg0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calBtn" destination="ZVJ-no-bg3" id="cVh-VI-Sct"/>
+                        <outlet property="calFiled" destination="xRJ-NL-OFL" id="bjy-63-t8O"/>
+                        <outlet property="calLabel" destination="4Lj-ig-mAt" id="Gz7-cn-Id9"/>
+                        <outlet property="resultLabel" destination="7c4-it-hoX" id="71V-Wd-PkC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
